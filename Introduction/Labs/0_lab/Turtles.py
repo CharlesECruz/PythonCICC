@@ -1,0 +1,31 @@
+import turtle
+screen= turtle.Screen()
+t = turtle.Turtle()
+t.hideturtle()
+t.speed(10)
+screen.bgcolor("#90ee90")
+t.shape("turtle")
+t.color("blue")
+#stamp turtle
+for _ in range(0,360,30):
+    t.penup()
+    t.forward(100)
+    #t.pendown()
+    t.stamp()
+    #t.penup()
+    t.right(180)
+    t.forward(100)
+    t.right(30)
+# lines
+for _ in range(0,360,30):
+    t.pensize(3)
+    t.penup()
+    t.forward(70)
+    t.pendown()
+    t.forward(10)
+    t.penup()
+    t.right(180)
+    t.forward(80)
+    t.right(30)
+t.showturtle()
+screen.exitonclick()
