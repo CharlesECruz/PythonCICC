@@ -33,7 +33,16 @@ def triple_steps(n):
         return 2
     else:
         return triple_steps(n - 3) + triple_steps(n - 2) + triple_steps(n - 1)
+def findStep(n):
+    if (n == 1 or n == 0):
+        return 1
+    elif (n == 2):
+        return 2
 
+    else:
+        return findStep(n - 3) + findStep(n - 2) + findStep(n - 1)
+n = 4
+print(findStep(n))
 # print(factorial_recur(8))
 # print(fibonacci(7))
 # print(power(5,2))

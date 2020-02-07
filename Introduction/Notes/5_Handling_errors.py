@@ -1,3 +1,14 @@
+while True:
+    try:
+        a=int(input("Enter a number: "))
+        b=int(input("Enter a number: "))
+        print(a*b)
+        break
+    except ValueError as e:
+        print(f"Invalid input:{e}")
+        print("Please enter a number!!!")
+
+# Another way to throw exceptions
 def mrange(start,end,steps=1):
     """
     Return a list of integers from start
@@ -23,7 +34,7 @@ def xrange(*args): #*args means that I could receive more than one parameter
         print("this are the parameter that I receive:",args)
         return mrange(*args)# *args means that I give like parameter all the args that I receive
     else:
-        raise TypeError("Invalid numbers of parameters dumb") #raise a Error by yourself like try catch in java
+        raise TypeError("Invalid numbers of parameters please try again") #raise a Error by yourself like try catch in java
 
 
 xrange(1,1,1,1,1,1,1,1)
